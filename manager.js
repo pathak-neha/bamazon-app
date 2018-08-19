@@ -48,7 +48,7 @@ function initializeApp(options) {
         }
 
         if (options.indexOf(choice) === 1) {
-            connection.query(`SELECT * FROM ${tableName} WHERE stock_quantity > 5`, function (err, res) {
+            connection.query(`SELECT * FROM ${tableName} WHERE stock_quantity < 5`, function (err, res) {
                 if (err) throw err;
                 console.log(`Items with low inventory:\n`)
                 for (var i = 0; i < res.length; i++) {
