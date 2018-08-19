@@ -55,7 +55,7 @@ function init() {
         productOrdered = ans.selectedID;
         quantityOrdered = parseInt(ans.selectedQ);
         console.log(`Your order: ${quantityOrdered} pieces of item # ${productOrdered}\n ${divider}
-        \nPlease wait for confirmation ...${divider}`);
+        \nPlease wait for confirmation ...\n${divider}`);
         processOrder(tableName, productOrdered, quantityOrdered)
     });
 };
@@ -85,7 +85,7 @@ function processOrder(tableName, productID, quantity) {
     //      after the checkInventory() function has received a response from the database. 
     //      The interval is cleared when the boolean is true.
     var checkProceed = setInterval(function () {
-        console.log('Inventory check complete? ' + proceed);
+        console.log(`Inventory check complete? ${proceed} \n${divider}`);
         if (proceed) {
             clearInterval(checkProceed)
             
@@ -107,10 +107,10 @@ function processOrder(tableName, productID, quantity) {
                             displayItems(tableName);
                         };
                     });
-            }
-        } else {
-            console.log(`Unfortunately, your order of ${quantity} units of item #${productID} could not be completed due to insufficient supplies. Please try again later. \n${divider}`);
-            displayItems(tableName);
+            } else {
+                console.log(`Unfortunately, your order of ${quantity} units of item #${productID} could not be completed due to insufficient supplies. Please try again later. \n${divider}`);
+                displayItems(tableName);
+        } 
         };
     }, 1000);
 
