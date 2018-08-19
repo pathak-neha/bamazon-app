@@ -1,0 +1,21 @@
+{
+  "name": "bamazon",
+  "version": "1.0.0",
+  "description": "Marketplace app (like Amazon) that uses an SQL Database",
+  "main": "customer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "SQL",
+    "MySQL",
+    "Inquirer",
+    "bamazon"
+  ],
+  "author": "Neha Pathak",
+  "license": "MIT",
+  "dependencies": {
+    "inquirer": "^6.1.0",
+    "mysql": "^2.16.0"
+  }
+}
