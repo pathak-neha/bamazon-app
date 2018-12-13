@@ -1,5 +1,5 @@
 ## Mock Amazon App
-*_A Node.js CLI application created with Inquirer and MySQL dependencies._*
+*_A Node.js CLI application created with Inquirer and MySQL dependencies._*  
 Using SQL backend to store a database of products, this app has two different modes for two distinct UIs.  
 - As a customer (entry point [customer.js](https://github.com/pathak-neha/bamazon-app/blob/master/customer.js)), you can view and purchase products.
 - As a manager (entry point [manager.js](https://github.com/pathak-neha/bamazon-app/blob/master/manager.js)), you can add a new product, add to current inventory, view a list of products with low inventory.
